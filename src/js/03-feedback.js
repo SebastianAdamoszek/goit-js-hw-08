@@ -40,16 +40,18 @@ const handleSubmit = (e) => {
             message: messageInput.value,
         };
 
-    console.log('Dane z formularza zostały wysłane:');
-    console.log('Email:', data.email);
-    console.log('Message:', data.message);
-    
-    // Czysczenie pamięci Local Storage
-    localStorage.removeItem(storageKey);
-    
-    // Czyszczenie pól
-    emailInput.value = '';
-    messageInput.value = '';
+        console.log('Dane z formularza zostały wysłane:');
+        console.log('Email:', data.email);
+        console.log('Message:', data.message);
+
+        // Czyszczenie pamięci Local Storage
+        localStorage.removeItem(storageKey);
+
+        // Czyszczenie pól
+        emailInput.value = '';
+        messageInput.value = '';
+    } else {
+        alert('Proszę wypełnić wszystkie pola formularza.');
     }
 };
 

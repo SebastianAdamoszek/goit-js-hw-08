@@ -38,11 +38,14 @@ const handleSubmit = (e) => {
         const data = {
             email: emailInput.value,
             message: messageInput.value,
+            
         };
 
+        
         console.log('Dane z formularza zostały wysłane:');
         console.log('Email:', data.email);
         console.log('Message:', data.message);
+        alert('Dane z formularza zostały wysłane:')
 
         // Czyszczenie pamięci Local Storage
         localStorage.removeItem(storageKey);

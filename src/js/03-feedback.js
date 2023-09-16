@@ -24,9 +24,22 @@ const loadFormState = () => {
     }
 };
 
+// Walidacja formularza
+const isFormValid = () => {
+    return emailInput.value.trim() !== '' && messageInput.value.trim() !== '';
+};
+
+
 // Wysłanie formularza
 const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (isFormValid()) {
+        const data = {
+            email: emailInput.value,
+            message: messageInput.value,
+        };
+
     console.log('Dane z formularza zostały wysłane:');
     console.log('Email:', emailInput.value);
     console.log('Message:', messageInput.value);
@@ -37,6 +50,7 @@ const handleSubmit = (e) => {
     // Czyszczenie pól
     emailInput.value = '';
     messageInput.value = '';
+    }
 };
 
 // Śledzenie i zapisywanie zmian w Local Storage z opóźnieniem

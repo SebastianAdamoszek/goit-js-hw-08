@@ -29,7 +29,6 @@ player.on('timeupdate', function(data) {
 });
 
 // Sprawdzam czy czas jest zapisany
-const savedTime = localStorage.getItem('videoplayer-current-time');
 player.on('loaded', () => {
     const savedTime = localStorage.getItem('videoplayer-current-time');
     if (savedTime) {

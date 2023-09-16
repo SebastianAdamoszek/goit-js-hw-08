@@ -34,7 +34,8 @@ if (savedTime !== null) {
     // Warunek jeśli czas jest zapisany ustaw go na odtwarzaczu
     player.setCurrentTime(parseFloat(savedTime));
 
-    console.log('Automatyczny zapis - oglądaj dalej!');
+
+    console.log('Automatyczny zapis - oglądaj dalej!')
 }
 
 // Start wideo
